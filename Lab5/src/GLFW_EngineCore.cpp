@@ -45,6 +45,9 @@ bool GLFW_EngineCore::initWindow(int width, int height, std::string windowName)
 	// callback functions
 	glfwSetFramebufferSizeCallback(m_window, windowResizeCallbackEvent);
 	glfwSetKeyCallback(m_window, keyCallbackEvent);
+	glfwSetCursorPosCallback(m_window, mouseMoveCallbackEvent);
+	glfwSetInputMode(m_window, GLFW_CURSOR, GLFW_CURSOR_HIDDEN);
+	glfwSetCursorEnterCallback(m_window, cursorEnterCallback);
 
 	// make space for the keybuffer
 	m_keyBuffer.resize(m_keyBufferSize);
@@ -91,6 +94,25 @@ void GLFW_EngineCore::renderColouredBackground(float r, float g, float b)
 }
 
 //-----------------------------Private functions------------------------------
+
+void GLFW_EngineCore::cursorEnterCallback(GLFWwindow * window, int entered)
+{
+	if (entered)
+	{
+	std::cout << "Entered Window" << endl;
+	}
+	else
+	{
+	std::cout << "Exited Window" << endl;
+	}
+}
+
+void GLFW_EngineCore::mouseMoveCallbackEvent(GLFWwindow * window, double xPos, double yPos)
+{
+
+	std::cout << "X Position: " << xPos << "   Y Position: " << yPos << endl;
+}
+
 void GLFW_EngineCore::keyCallbackEvent(GLFWwindow* window, int key, int scancode, int action, int mods)
 {
 	if (key == GLFW_KEY_UNKNOWN || key > m_keyBufferSize)
@@ -248,6 +270,8 @@ void GLFW_EngineCore::initCubeModel()
 	glEnableVertexAttribArray(1);
 	
 }
+
+
 
 void GLFW_EngineCore::setCamera(const Camera* cam)
 {

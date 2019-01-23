@@ -30,14 +30,13 @@ private:
 	static int m_screenHeight;
 	static std::vector<bool> m_keyBuffer;
 	static const int m_keyBufferSize = 400;
-
 	static void mouseMoveCallbackEvent(GLFWwindow* window, double xPos, double yPos);
 	static void keyCallbackEvent(GLFWwindow* window, int key, int scancode, int action, int mods);
 	static void windowResizeCallbackEvent(GLFWwindow* window, int width, int height);
 	
 	void setDefaultShaders();
 	void initCubeModel();
-
+	static void cursorEnterCallback(GLFWwindow* window, int entered);
 
 };
 
