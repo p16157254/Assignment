@@ -1,0 +1,30 @@
+{
+  "GameObjects": [
+      {"name": "A", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "B", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "C", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "D", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "E", "letterSpace": [1.0,0.0,0.0]}
+	  {"name": "F", "letterSpace": [0.75,0.0,0.0]},
+	  {"name": "G", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "H", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "I", "letterSpace": [0.5,0.0,0.0]},
+	  {"name": "J", "letterSpace": [0.75,0.0,0.0]}
+	  {"name": "K", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "L", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "M", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "N", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "O", "letterSpace": [1.0,0.0,0.0]}
+	  {"name": "P", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "Q", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "R", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "S", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "T", "letterSpace": [1.0,0.0,0.0]}
+	  {"name": "U", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "V", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "W", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "X", "letterSpace": [1.0,0.0,0.0]},
+	  {"name": "Y", "letterSpace": [1.0,0.0,0.0]}
+	  {"name": "Z", "letterSpace": [1.0,0.0,0.0]},
+  ]
+}
