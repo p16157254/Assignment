@@ -4,16 +4,13 @@
 Game::Game()
 {
 	m_engineInterfacePtr = nullptr;
-
 	
-
 
 	m_playerBackground.addComponent(new RedComponent);
 	m_playerBackground.addComponent(new GreenComponent);
 	m_playerBackground.addComponent(new BlueComponent);
 
-
-
+	
 
 	m_currentScene->loadLevelJSON(m_currentScene->getLevel());
 	

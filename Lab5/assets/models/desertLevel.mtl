@@ -5,12 +5,37 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd tree.jpg
 Ni 1.00
-newmtl lambert4SG
+newmtl initialShadingGroup
+illum 4
+Kd 0.27 0.19 0.09
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert5SG
 illum 4
 Kd 0.00 0.00 0.00
 Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
-map_Kd leaf.jpg
+map_Kd bone.jpg
+Ni 1.00
+newmtl lambert6SG
+illum 4
+Kd 0.00 0.00 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+map_Kd coco.jpg
+Ni 1.00
+newmtl lambert7SG
+illum 4
+Kd 0.13 0.13 0.32
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
+Ni 1.00
+newmtl lambert8SG
+illum 4
+Kd 0.00 0.43 0.00
+Ka 0.00 0.00 0.00
+Tf 1.00 1.00 1.00
 Ni 1.00
 newmtl phong1SG
 illum 4
@@ -19,12 +44,3 @@ Ka 0.00 0.00 0.00
 Tf 1.00 1.00 1.00
 map_Kd sand.jpg
 Ni 1.00
-newmtl phong2SG
-illum 4
-Kd 0.00 0.00 0.00
-Ka 0.00 0.00 0.00
-Tf 1.00 1.00 1.00
-map_Kd water.jpg
-Ni 1.00
-Ks 0.50 0.50 0.50
-Ns 18.00

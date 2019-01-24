@@ -1,11 +1,12 @@
 #pragma once
+#include "Component.h"
 #include <glm/glm.hpp>
 #include <glm/gtc/matrix_transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
 #define GLM_ENABLE_EXPERIMENTAL
 #include <glm/gtx/quaternion.hpp>
 
-class Camera
+class Camera : public Component
 {
 public:
 	glm::vec3 m_position;
@@ -34,4 +35,11 @@ public:
 	void roll(float angle) { rotate(angle, 0.0f, 0.0f, 1.0f); }
 
 	void setFOV(float fov) { m_fov = fov; }
+
+	void OnUpdate(float dt) override 
+	{
+	}
+	void OnMessage(const std::string m) override
+	{
+	}
 };

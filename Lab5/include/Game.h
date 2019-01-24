@@ -39,4 +39,6 @@ private:
 
 	
 	Scene* m_currentScene = new Scene("assets/Levels/snowLevel.json");
+	//Scene* m_Level1 = new Scene("assets/Levels/snowLevel.json");
+	//Scene* m_Level2 = new Scene("assets/Levels/myCubeLevel.json");
 };

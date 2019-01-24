@@ -12,6 +12,8 @@ class InputCommand
 public:
 	virtual ~InputCommand() {}
 	virtual void execute(GameObject& playerBackground) = 0;
+	int iLevel = 1;
+	bool bMoved = false;
 };
 
 
@@ -26,6 +28,7 @@ public:
 		if (m_playerCube.getComponent<TransformComponent>())
 			m_playerCube.getComponent<TransformComponent>()->rotate(m_playerCube.getComponent<TransformComponent>()->getRotateValue(true), glm::vec3(0.f, 1.f, 0.0f));
 	};
+	
 };
 
 
@@ -140,6 +143,31 @@ public:
 	{
 		if (m_playerCube.getComponent<TransformComponent>())
 			m_playerCube.getComponent<TransformComponent>()->translate(0.f, m_playerCube.getComponent<TransformComponent>()->getTranslateValue(false), 0.f);
+		
+	};
+};
+
+class SwitchScene : public InputCommand
+{
+public:
+	void execute(GameObject& m_playerCube) override
+	{
+		if (m_playerCube.getComponent<TransformComponent>())
+			if (iLevel == 1) {
+				m_playerCube.getComponent<TransformComponent>()->translate(100.f, 0.f, 0.f);
+				iLevel++;
+			}
+			else if (iLevel == 2)
+			{
+				m_playerCube.getComponent<TransformComponent>()->translate(-200.f, 0.f, 0.f);
+				iLevel++;
+			}
+			else if (iLevel == 3)
+			{
+				m_playerCube.getComponent<TransformComponent>()->translate(100.f, 0.f, 0.f);
+				iLevel = 1;
+			}
+
 	};
 };
 
@@ -168,6 +196,7 @@ struct InputHandler
 		m_controlMapping[82] = new TranslateDown;
 		m_controlMapping[67] = new ScaleCubeUp;
 		m_controlMapping[90] = new ScaleCubeDown;
+		m_controlMapping[49] = new SwitchScene;
 	}
 
 	void handleInputs(const std::vector<bool>& keyBuffer)
