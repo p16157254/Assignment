@@ -1,0 +1,232 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+\mbox{\hyperlink{class_camera}{Camera}} handles all of the cameras in the game and is a component of \mbox{\hyperlink{class_component}{Component}}.  
+
+
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+Inheritance diagram for Camera\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_camera}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_acee2a1b3d56b0f141a3c6ee82735ed39}\label{class_camera_acee2a1b3d56b0f141a3c6ee82735ed39}} 
+{\bfseries Camera} (const glm\+::vec3 \&pos)
+\item 
+\mbox{\Hypertarget{class_camera_a9e5dda23dca2ae363424f7a9025f55c9}\label{class_camera_a9e5dda23dca2ae363424f7a9025f55c9}} 
+{\bfseries Camera} (const glm\+::vec3 \&pos, const glm\+::quat \&orient)
+\item 
+\mbox{\Hypertarget{class_camera_aec0442093303b9568a159f8c87f8b7d8}\label{class_camera_aec0442093303b9568a159f8c87f8b7d8}} 
+void {\bfseries look\+At} (const glm\+::vec3 \&target)
+\item 
+const glm\+::vec3 \& \mbox{\hyperlink{class_camera_a26f5c28317ec7add2a21ddbdc8e463fb}{position}} () const
+\begin{DoxyCompactList}\small\item\em Sets the direction of the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a872dd113215278493380d19716c63644}\label{class_camera_a872dd113215278493380d19716c63644}} 
+const glm\+::quat \& \mbox{\hyperlink{class_camera_a872dd113215278493380d19716c63644}{orientation}} () const
+\begin{DoxyCompactList}\small\item\em Gets the position of the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a2f90e661a78172675ca06ea69667b531}\label{class_camera_a2f90e661a78172675ca06ea69667b531}} 
+glm\+::mat4 \mbox{\hyperlink{class_camera_a2f90e661a78172675ca06ea69667b531}{get\+View\+Matrix}} () const
+\begin{DoxyCompactList}\small\item\em Gets the orientation if the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aa00429d00bae4984467f9c5d1a3bd158}\label{class_camera_aa00429d00bae4984467f9c5d1a3bd158}} 
+void \mbox{\hyperlink{class_camera_aa00429d00bae4984467f9c5d1a3bd158}{translate}} (const glm\+::vec3 \&v)
+\begin{DoxyCompactList}\small\item\em Gets the current view matrix. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ac9e53556c53beee69c77a97e2a1c1068}{translate}} (float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Translates the camera using a Vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a0e6180b5a8da63a999db3de1802c8f4c}{rotate}} (float angle, const glm\+::vec3 \&axis)
+\begin{DoxyCompactList}\small\item\em Translates the camera using 3 floats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a4a45040f06f24a53af7f17bbcc610f22}{rotate}} (float angle, float x, float y, float z)
+\begin{DoxyCompactList}\small\item\em Rotates the camera using a Vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ab4eab94754431725c572d528a07a35cc}{yaw}} (float angle)
+\begin{DoxyCompactList}\small\item\em Rotates the camera using 3 floats. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a49e00b90b94853e4485a6bdf063796de}{pitch}} (float angle)
+\begin{DoxyCompactList}\small\item\em Handles the yaw of the camera (Y axis) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a72be99f88b1cc21122178109d3441818}{roll}} (float angle)
+\begin{DoxyCompactList}\small\item\em Handles the pitch of the camera (X axis) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_ade53ee61895c2143da3cec03d08ef3eb}{set\+F\+OV}} (float fov)
+\begin{DoxyCompactList}\small\item\em Handles the roll of the camera (Z axis) \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_camera_a39a34df15a2791296a668537a242b9e5}{On\+Update}} (float dt) override
+\begin{DoxyCompactList}\small\item\em Sets the fov of the camera. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_a2aee4db547c6bcafa219f9c59e2775fa}\label{class_camera_a2aee4db547c6bcafa219f9c59e2775fa}} 
+void \mbox{\hyperlink{class_camera_a2aee4db547c6bcafa219f9c59e2775fa}{On\+Message}} (const std\+::string m) override
+\begin{DoxyCompactList}\small\item\em Checks form messages to the camera. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_camera_aa4d06d49524248f81823444fa2544da0}\label{class_camera_aa4d06d49524248f81823444fa2544da0}} 
+glm\+::vec3 \mbox{\hyperlink{class_camera_aa4d06d49524248f81823444fa2544da0}{m\+\_\+position}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+position is a vector storing the camera position \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_ac035d6cb4b4bae255d6d12f51137357e}\label{class_camera_ac035d6cb4b4bae255d6d12f51137357e}} 
+glm\+::quat \mbox{\hyperlink{class_camera_ac035d6cb4b4bae255d6d12f51137357e}{m\+\_\+orientation}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+orientation is a quaternion storing the cameras orientation \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_camera_aa404a4e057fa16fb82ce8668d7a661b6}\label{class_camera_aa404a4e057fa16fb82ce8668d7a661b6}} 
+float \mbox{\hyperlink{class_camera_aa404a4e057fa16fb82ce8668d7a661b6}{m\+\_\+fov}}
+\begin{DoxyCompactList}\small\item\em m\+\_\+fov stores the games field of view \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_camera}{Camera}} handles all of the cameras in the game and is a component of \mbox{\hyperlink{class_component}{Component}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_camera_a39a34df15a2791296a668537a242b9e5}\label{class_camera_a39a34df15a2791296a668537a242b9e5}} 
+\index{Camera@{Camera}!OnUpdate@{OnUpdate}}
+\index{OnUpdate@{OnUpdate}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{OnUpdate()}{OnUpdate()}}
+{\footnotesize\ttfamily void Camera\+::\+On\+Update (\begin{DoxyParamCaption}\item[{float}]{dt }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+
+Sets the fov of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em fov} & fov stores the fov set by m\+\_\+fov\+Updates the camera \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_component}{Component}}.
+
+\mbox{\Hypertarget{class_camera_a49e00b90b94853e4485a6bdf063796de}\label{class_camera_a49e00b90b94853e4485a6bdf063796de}} 
+\index{Camera@{Camera}!pitch@{pitch}}
+\index{pitch@{pitch}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{pitch()}{pitch()}}
+{\footnotesize\ttfamily void Camera\+::pitch (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the yaw of the camera (Y axis) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle is the angle that stores the rotates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a26f5c28317ec7add2a21ddbdc8e463fb}\label{class_camera_a26f5c28317ec7add2a21ddbdc8e463fb}} 
+\index{Camera@{Camera}!position@{position}}
+\index{position@{position}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{position()}{position()}}
+{\footnotesize\ttfamily const glm\+::vec3\& Camera\+::position (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Sets the direction of the camera. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em target} & target is the vecotr containing the position the camera should be looking at \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a72be99f88b1cc21122178109d3441818}\label{class_camera_a72be99f88b1cc21122178109d3441818}} 
+\index{Camera@{Camera}!roll@{roll}}
+\index{roll@{roll}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{roll()}{roll()}}
+{\footnotesize\ttfamily void Camera\+::roll (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the pitch of the camera (X axis) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle is the angle that stores the rotates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a0e6180b5a8da63a999db3de1802c8f4c}\label{class_camera_a0e6180b5a8da63a999db3de1802c8f4c}} 
+\index{Camera@{Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void Camera\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{const glm\+::vec3 \&}]{axis }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates the camera using 3 floats. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em x} & x is the x value of the movement \\
+\hline
+{\em y} & y is the x value of the movement \\
+\hline
+{\em z} & z is the x value of the movement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_a4a45040f06f24a53af7f17bbcc610f22}\label{class_camera_a4a45040f06f24a53af7f17bbcc610f22}} 
+\index{Camera@{Camera}!rotate@{rotate}}
+\index{rotate@{rotate}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{rotate()}{rotate()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily void Camera\+::rotate (\begin{DoxyParamCaption}\item[{float}]{angle,  }\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotates the camera using a Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle is the angle that stores the rotation \\
+\hline
+{\em axis} & axis is the axis on which this rotation should take place \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_ade53ee61895c2143da3cec03d08ef3eb}\label{class_camera_ade53ee61895c2143da3cec03d08ef3eb}} 
+\index{Camera@{Camera}!setFOV@{setFOV}}
+\index{setFOV@{setFOV}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{setFOV()}{setFOV()}}
+{\footnotesize\ttfamily void Camera\+::set\+F\+OV (\begin{DoxyParamCaption}\item[{float}]{fov }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Handles the roll of the camera (Z axis) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em angle} & angle is the angle that stores the rotates \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_ac9e53556c53beee69c77a97e2a1c1068}\label{class_camera_ac9e53556c53beee69c77a97e2a1c1068}} 
+\index{Camera@{Camera}!translate@{translate}}
+\index{translate@{translate}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{translate()}{translate()}}
+{\footnotesize\ttfamily void Camera\+::translate (\begin{DoxyParamCaption}\item[{float}]{x,  }\item[{float}]{y,  }\item[{float}]{z }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Translates the camera using a Vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em v} & v is the vector that stores the movement \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_camera_ab4eab94754431725c572d528a07a35cc}\label{class_camera_ab4eab94754431725c572d528a07a35cc}} 
+\index{Camera@{Camera}!yaw@{yaw}}
+\index{yaw@{yaw}!Camera@{Camera}}
+\subsubsection{\texorpdfstring{yaw()}{yaw()}}
+{\footnotesize\ttfamily void Camera\+::yaw (\begin{DoxyParamCaption}\item[{float}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Rotates the camera using 3 floats. 
+
+\begin{DoxyVerb}                                                                                                                               \param angle angle is the angle that stores the rotation
+                                                                                                                               \param x x is the x value of the rotation
+\end{DoxyVerb}
+ 
+\begin{DoxyParams}{Parameters}
+{\em y} & y is the x value of the rotation \\
+\hline
+{\em z} & z is the x value of the rotation \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_camera_8h}{Camera.\+h}}\end{DoxyCompactItemize}

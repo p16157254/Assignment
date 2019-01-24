@@ -1,3 +1,7 @@
+/*! \file Game.h
+* Class controls the game engines game loop and actions
+*/
+
 #pragma once
 
 #include "Scene.h"
@@ -8,37 +12,34 @@
 
 using namespace std;
 
-class IEngineCore;
-class InputHandler;
+class IEngineCore;//! IEngineCore Class handles the Engine Core
+class InputHandler;//! InputHandler Class handles player inputs
 
 
 class Game
 {
 public:
-	Game();
+	Game();//!< Game Constructior
 
-	IEngineCore* m_engineInterfacePtr;
-	InputHandler* m_inputHandler;
+	IEngineCore* m_engineInterfacePtr;//!< Engine Core pointer
+	InputHandler* m_inputHandler;//!< Input Handler Pointer
 
 	
 
-	void update();
-	void render();
+	void update();//<! Update function
+	void render();//<! Render function 
 
 			
 private:
-	GameObject m_playerBackground;
-	GameObject m_playerCube;
-	Camera m_camera;
-	int numCubesToRead;
-	int iLevel;
-	stringstream ss;
-	string s;
-	float w, x, y, z;
+	GameObject m_playerBackground;//! The Game Object playerBackground
+	GameObject m_playerCube;//! The Game Object playerCube
+	Camera m_camera; //! The Camera camera
+	int numCubesToRead; //! Integer holding the number of objects needing to be loaded
+	stringstream ss; //! The String Stream ss, used for reading in JSON files
+	string s;//! The String s, used for reading in JSON files
+	float w, x, y, z;//! Floats w, x, y and z hold the position of loaded objects
 
 
 	
-	Scene* m_currentScene = new Scene("assets/Levels/snowLevel.json");
-	//Scene* m_Level1 = new Scene("assets/Levels/snowLevel.json");
-	//Scene* m_Level2 = new Scene("assets/Levels/myCubeLevel.json");
+	Scene* m_currentScene = new Scene("assets/Levels/LevelFile.json"); //! The Scene pointer currentScene, it holds the path to the LevelFile.json
 };

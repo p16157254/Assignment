@@ -1,0 +1,130 @@
+\hypertarget{class_g_l_f_w___engine_core}{}\section{G\+L\+F\+W\+\_\+\+Engine\+Core Class Reference}
+\label{class_g_l_f_w___engine_core}\index{GLFW\_EngineCore@{GLFW\_EngineCore}}
+
+
+\mbox{\hyperlink{class_g_l_f_w___engine_core}{G\+L\+F\+W\+\_\+\+Engine\+Core}} class handles the games engine core and is a component of \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.  
+
+
+
+
+{\ttfamily \#include $<$G\+L\+F\+W\+\_\+\+Engine\+Core.\+h$>$}
+
+Inheritance diagram for G\+L\+F\+W\+\_\+\+Engine\+Core\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_g_l_f_w___engine_core}
+\end{center}
+\end{figure}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_adf17916892982f1103140b22dc1b37be}\label{class_g_l_f_w___engine_core_adf17916892982f1103140b22dc1b37be}} 
+\mbox{\hyperlink{class_g_l_f_w___engine_core_adf17916892982f1103140b22dc1b37be}{$\sim$\+G\+L\+F\+W\+\_\+\+Engine\+Core}} () override
+\begin{DoxyCompactList}\small\item\em Engine Core Constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_aa786131ec64e7ee6779c3ac1ee8507ce}\label{class_g_l_f_w___engine_core_aa786131ec64e7ee6779c3ac1ee8507ce}} 
+bool {\bfseries init\+Window} (int width, int height, std\+::string window\+Name) override
+\item 
+bool \mbox{\hyperlink{class_g_l_f_w___engine_core_adf9266f1a9b5d97992691224f0f20c7b}{run\+Engine}} (\mbox{\hyperlink{class_game}{Game}} \&game) override
+\item 
+void \mbox{\hyperlink{class_g_l_f_w___engine_core_a6031a54b0978d6e0fd1be3f292c2059f}{render\+Coloured\+Background}} (float r, float g, float b) override
+\item 
+void \mbox{\hyperlink{class_g_l_f_w___engine_core_a2aba4fb8a635f96fc4057ba841670a29}{set\+Camera}} (const \mbox{\hyperlink{class_camera}{Camera}} $\ast$cam) override
+\item 
+void \mbox{\hyperlink{class_g_l_f_w___engine_core_a728d1f6ffd1e8526611ab0856db537c0}{draw\+Cube}} (const glm\+::mat4 \&model\+Matrix) override
+\item 
+void \mbox{\hyperlink{class_g_l_f_w___engine_core_a568f74989d1e203658a6fe43140a0283}{draw\+Model}} (\mbox{\hyperlink{class_model}{Model}} $\ast$model, glm\+::mat4 \&model\+Matrix)
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{class_g_l_f_w___engine_core}{G\+L\+F\+W\+\_\+\+Engine\+Core}} class handles the games engine core and is a component of \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}. 
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_a728d1f6ffd1e8526611ab0856db537c0}\label{class_g_l_f_w___engine_core_a728d1f6ffd1e8526611ab0856db537c0}} 
+\index{GLFW\_EngineCore@{GLFW\_EngineCore}!drawCube@{drawCube}}
+\index{drawCube@{drawCube}!GLFW\_EngineCore@{GLFW\_EngineCore}}
+\subsubsection{\texorpdfstring{drawCube()}{drawCube()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+\_\+\+Engine\+Core\+::draw\+Cube (\begin{DoxyParamCaption}\item[{const glm\+::mat4 \&}]{model\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em cam} & cam is the game camera \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.
+
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_a568f74989d1e203658a6fe43140a0283}\label{class_g_l_f_w___engine_core_a568f74989d1e203658a6fe43140a0283}} 
+\index{GLFW\_EngineCore@{GLFW\_EngineCore}!drawModel@{drawModel}}
+\index{drawModel@{drawModel}!GLFW\_EngineCore@{GLFW\_EngineCore}}
+\subsubsection{\texorpdfstring{drawModel()}{drawModel()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+\_\+\+Engine\+Core\+::draw\+Model (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_model}{Model}} $\ast$}]{model,  }\item[{glm\+::mat4 \&}]{model\+Matrix }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em model\+Matrix} & model\+Matrix is a glm matrix that holds the model for rendering \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.
+
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_a6031a54b0978d6e0fd1be3f292c2059f}\label{class_g_l_f_w___engine_core_a6031a54b0978d6e0fd1be3f292c2059f}} 
+\index{GLFW\_EngineCore@{GLFW\_EngineCore}!renderColouredBackground@{renderColouredBackground}}
+\index{renderColouredBackground@{renderColouredBackground}!GLFW\_EngineCore@{GLFW\_EngineCore}}
+\subsubsection{\texorpdfstring{renderColouredBackground()}{renderColouredBackground()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+\_\+\+Engine\+Core\+::render\+Coloured\+Background (\begin{DoxyParamCaption}\item[{float}]{r,  }\item[{float}]{g,  }\item[{float}]{b }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em \mbox{\hyperlink{class_game}{Game}}} & \mbox{\hyperlink{class_game}{Game}} is the actual game engine \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.
+
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_adf9266f1a9b5d97992691224f0f20c7b}\label{class_g_l_f_w___engine_core_adf9266f1a9b5d97992691224f0f20c7b}} 
+\index{GLFW\_EngineCore@{GLFW\_EngineCore}!runEngine@{runEngine}}
+\index{runEngine@{runEngine}!GLFW\_EngineCore@{GLFW\_EngineCore}}
+\subsubsection{\texorpdfstring{runEngine()}{runEngine()}}
+{\footnotesize\ttfamily bool G\+L\+F\+W\+\_\+\+Engine\+Core\+::run\+Engine (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_game}{Game}} \&}]{game }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em width} & width of the game window \\
+\hline
+{\em height} & height of the game window \\
+\hline
+{\em window\+Name} & the name of the game window \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.
+
+\mbox{\Hypertarget{class_g_l_f_w___engine_core_a2aba4fb8a635f96fc4057ba841670a29}\label{class_g_l_f_w___engine_core_a2aba4fb8a635f96fc4057ba841670a29}} 
+\index{GLFW\_EngineCore@{GLFW\_EngineCore}!setCamera@{setCamera}}
+\index{setCamera@{setCamera}!GLFW\_EngineCore@{GLFW\_EngineCore}}
+\subsubsection{\texorpdfstring{setCamera()}{setCamera()}}
+{\footnotesize\ttfamily void G\+L\+F\+W\+\_\+\+Engine\+Core\+::set\+Camera (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_camera}{Camera}} $\ast$}]{cam }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [virtual]}}
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & r is the Red value in R\+GB \\
+\hline
+{\em g} & g is the Green value in R\+GB \\
+\hline
+{\em b} & b is the Blue value in R\+GB \\
+\hline
+\end{DoxyParams}
+
+
+Implements \mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_g_l_f_w___engine_core_8h}{G\+L\+F\+W\+\_\+\+Engine\+Core.\+h}}\end{DoxyCompactItemize}

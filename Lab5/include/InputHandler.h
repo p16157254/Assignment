@@ -1,3 +1,7 @@
+/*! \file InputHandler.h
+* Class controls the game engines inputs
+*/
+
 #pragma once
 
 #include <map>
@@ -7,32 +11,31 @@
 
 
 
-class InputCommand
+class InputCommand //! InputCommand class handles all of the player inputs
 {
 public:
-	virtual ~InputCommand() {}
-	virtual void execute(GameObject& playerBackground) = 0;
-	int iLevel = 1;
-	bool bMoved = false;
+	virtual ~InputCommand() {} //! Destructor for InputCommand
+	virtual void execute(GameObject& playerBackground) = 0; //! Executes a command
+	int iLevel = 1; //! Stores the current level loaded
 };
 
 
 //e.g. class RotateLeftCommand : public InputCommand
 
 
-class RotateCubeCW : public InputCommand
+class RotateCubeCW : public InputCommand //! Rotates the view clockwise
 {
 public:
 	void execute(GameObject& m_playerCube) override
 	{
 		if (m_playerCube.getComponent<TransformComponent>())
-			m_playerCube.getComponent<TransformComponent>()->rotate(m_playerCube.getComponent<TransformComponent>()->getRotateValue(true), glm::vec3(0.f, 1.f, 0.0f));
+			m_playerCube.getComponent<TransformComponent>()->rotate(m_playerCube.getComponent<TransformComponent>()->getRotateValue(true), glm::vec3(0.f, 1.f, 0.0f)); 
 	};
 	
 };
 
 
-class RotateCubeCCW : public InputCommand
+class RotateCubeCCW : public InputCommand //! Rotates the view counter clockwise
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -42,7 +45,7 @@ public:
 	};
 };
 
-class RotateUp : public InputCommand
+class RotateUp : public InputCommand //! Rotates the view up
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -53,7 +56,7 @@ public:
 };
 
 
-class RotateDown : public InputCommand
+class RotateDown : public InputCommand //! Rotates the view down
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -65,7 +68,7 @@ public:
 
 
 
-class TranslateRight : public InputCommand
+class TranslateRight : public InputCommand //! Moves the player right
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -75,7 +78,7 @@ public:
 	};
 };
 
-class TranslateLeft : public InputCommand
+class TranslateLeft : public InputCommand //! Moves the player left
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -86,7 +89,7 @@ public:
 };
 
 
-class ScaleCubeUp : public InputCommand
+class ScaleCubeUp : public InputCommand //! Scales the cube up in the x axis
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -96,7 +99,7 @@ public:
 	};
 };
 
-class ScaleCubeDown : public InputCommand
+class ScaleCubeDown : public InputCommand //! Scales the cube up in the x axis
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -106,7 +109,7 @@ public:
 	};
 };
 
-class TranslateForward : public InputCommand
+class TranslateForward : public InputCommand //! Moves the player forward
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -116,7 +119,7 @@ public:
 	};
 };
 
-class TranslateBack : public InputCommand
+class TranslateBack : public InputCommand //! Moves the player back
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -126,7 +129,7 @@ public:
 	};
 };
 
-class TranslateUp : public InputCommand
+class TranslateUp : public InputCommand //! Moves the player up
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -136,7 +139,7 @@ public:
 	};
 };
 
-class TranslateDown : public InputCommand
+class TranslateDown : public InputCommand //! Moves the player down
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -147,7 +150,7 @@ public:
 	};
 };
 
-class SwitchScene : public InputCommand
+class SwitchScene : public InputCommand //! Switches the scene
 {
 public:
 	void execute(GameObject& m_playerCube) override
@@ -174,17 +177,21 @@ public:
 
 
 
-struct InputHandler
+struct InputHandler //! InputHandler struct 
 {
-	std::vector<GameObject>* m_playerCube;
+	std::vector<GameObject>* m_playerCube; //! Pointer to the m_playerCube vector of game objects
 
-	std::map<int, InputCommand*> m_controlMapping;
+	std::map<int, InputCommand*> m_controlMapping; //! m_controlMapping is a map containing an integer and the InputCommand pointer
 
-	InputHandler(std::vector<GameObject>* p_playerCubes) : m_playerCube(p_playerCubes)
+	InputHandler(std::vector<GameObject>* p_playerCubes) : m_playerCube(p_playerCubes) //! InputHandler is a component of m_playerCubes
+		/*!
+			It contains all of the control mapping for each of the execute commands
+		*/
 	{
 		// the idea will be to map the keys directly from a config file that can be loaded in
 		// and changed on the fly
-		m_controlMapping[76] = new RotateCubeCW;
+		
+		m_controlMapping[76] = new RotateCubeCW; 
 		m_controlMapping[74] = new RotateCubeCCW;
 		m_controlMapping[75] = new RotateUp;
 		m_controlMapping[73] = new RotateDown;
@@ -197,9 +204,11 @@ struct InputHandler
 		m_controlMapping[67] = new ScaleCubeUp;
 		m_controlMapping[90] = new ScaleCubeDown;
 		m_controlMapping[49] = new SwitchScene;
+		
 	}
 
-	void handleInputs(const std::vector<bool>& keyBuffer)
+	void handleInputs(const std::vector<bool>& keyBuffer) //! Handles the input for the game engine
+	
 	{
 
 		for (const auto& mapEntry : m_controlMapping)

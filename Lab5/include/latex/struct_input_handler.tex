@@ -1,0 +1,49 @@
+\hypertarget{struct_input_handler}{}\section{Input\+Handler Struct Reference}
+\label{struct_input_handler}\index{InputHandler@{InputHandler}}
+
+
+\mbox{\hyperlink{struct_input_handler}{Input\+Handler}} struct.  
+
+
+
+
+{\ttfamily \#include $<$Input\+Handler.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{struct_input_handler_aba97e51610d5809dadb917a43057e921}{Input\+Handler}} (std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $\ast$p\+\_\+player\+Cubes)
+\begin{DoxyCompactList}\small\item\em m\+\_\+control\+Mapping is a map containing an integer and the \mbox{\hyperlink{class_input_command}{Input\+Command}} pointer \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{struct_input_handler_a250b665d3a9bc35bd8d6b544266e4faf}\label{struct_input_handler_a250b665d3a9bc35bd8d6b544266e4faf}} 
+void \mbox{\hyperlink{struct_input_handler_a250b665d3a9bc35bd8d6b544266e4faf}{handle\+Inputs}} (const std\+::vector$<$ bool $>$ \&key\+Buffer)
+\begin{DoxyCompactList}\small\item\em Handles the input for the game engine. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{struct_input_handler_aa83cb42d294f01fcfc9e0dc78fb43816}\label{struct_input_handler_aa83cb42d294f01fcfc9e0dc78fb43816}} 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $\ast$ {\bfseries m\+\_\+player\+Cube}
+\item 
+\mbox{\Hypertarget{struct_input_handler_abe853597d11b94e0668c8db6638a0548}\label{struct_input_handler_abe853597d11b94e0668c8db6638a0548}} 
+std\+::map$<$ int, \mbox{\hyperlink{class_input_command}{Input\+Command}} $\ast$ $>$ \mbox{\hyperlink{struct_input_handler_abe853597d11b94e0668c8db6638a0548}{m\+\_\+control\+Mapping}}
+\begin{DoxyCompactList}\small\item\em Pointer to the m\+\_\+player\+Cube vector of game objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\mbox{\hyperlink{struct_input_handler}{Input\+Handler}} struct. 
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{struct_input_handler_aba97e51610d5809dadb917a43057e921}\label{struct_input_handler_aba97e51610d5809dadb917a43057e921}} 
+\index{InputHandler@{InputHandler}!InputHandler@{InputHandler}}
+\index{InputHandler@{InputHandler}!InputHandler@{InputHandler}}
+\subsubsection{\texorpdfstring{InputHandler()}{InputHandler()}}
+{\footnotesize\ttfamily Input\+Handler\+::\+Input\+Handler (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $\ast$}]{p\+\_\+player\+Cubes }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+m\+\_\+control\+Mapping is a map containing an integer and the \mbox{\hyperlink{class_input_command}{Input\+Command}} pointer 
+
+It contains all of the control mapping for each of the execute commands 
+
+The documentation for this struct was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_input_handler_8h}{Input\+Handler.\+h}}\end{DoxyCompactItemize}

@@ -1,0 +1,65 @@
+\hypertarget{class_scene}{}\section{Scene Class Reference}
+\label{class_scene}\index{Scene@{Scene}}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_ac37134d2e2d9abad9996c25bb23335f9}\label{class_scene_ac37134d2e2d9abad9996c25bb23335f9}} 
+{\bfseries Scene} (std\+::string p\+\_\+s\+Level)
+\item 
+\mbox{\Hypertarget{class_scene_aa24c7e636c10e4e42650c1374b90bb80}\label{class_scene_aa24c7e636c10e4e42650c1374b90bb80}} 
+void \mbox{\hyperlink{class_scene_aa24c7e636c10e4e42650c1374b90bb80}{update}} ()
+\begin{DoxyCompactList}\small\item\em \mbox{\hyperlink{class_scene}{Scene}} constructor. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a3cb0abfc84cb1ab6e6d0acb8bd40a205}\label{class_scene_a3cb0abfc84cb1ab6e6d0acb8bd40a205}} 
+void \mbox{\hyperlink{class_scene_a3cb0abfc84cb1ab6e6d0acb8bd40a205}{render}} (\mbox{\hyperlink{class_i_engine_core}{I\+Engine\+Core}} $\ast$p\+\_\+engine\+Interface\+Ptr)
+\begin{DoxyCompactList}\small\item\em Update function. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_scene_adc40ce0e3e79c9dbb504f42f7a55b153}{load\+Level\+J\+S\+ON}} (std\+::string level\+J\+S\+O\+N\+File)
+\begin{DoxyCompactList}\small\item\em Render function. \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $\ast$ \mbox{\hyperlink{class_scene_accfbee3379223ae8d452b6829dc591dc}{get\+Cubes}} ()
+\begin{DoxyCompactList}\small\item\em Function to load a J\+S\+ON file as a level. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_scene_a4b1ae4b8529307db0984c6a9926094cf}\label{class_scene_a4b1ae4b8529307db0984c6a9926094cf}} 
+std\+::string \mbox{\hyperlink{class_scene_a4b1ae4b8529307db0984c6a9926094cf}{get\+Level}} ()
+\begin{DoxyCompactList}\small\item\em Puts the objects in the level into a vector of \mbox{\hyperlink{class_game}{Game}} Objects. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Protected Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_scene_a15f9f3b86f64168b5172bea1b499d07b}\label{class_scene_a15f9f3b86f64168b5172bea1b499d07b}} 
+std\+::vector$<$ \mbox{\hyperlink{class_game_object}{Game\+Object}} $>$ $\ast$ \mbox{\hyperlink{class_scene_a15f9f3b86f64168b5172bea1b499d07b}{v\+\_\+player\+Objects}} = new std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$>$()
+\begin{DoxyCompactList}\small\item\em Stores the path and name of the level. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{class_scene_accfbee3379223ae8d452b6829dc591dc}\label{class_scene_accfbee3379223ae8d452b6829dc591dc}} 
+\index{Scene@{Scene}!getCubes@{getCubes}}
+\index{getCubes@{getCubes}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{getCubes()}{getCubes()}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{class_game_object}{Game\+Object}}$>$$\ast$ Scene\+::get\+Cubes (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Function to load a J\+S\+ON file as a level. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em level\+J\+S\+O\+N\+File} & level\+J\+S\+O\+N\+File is the string that stores the level path and name \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{class_scene_adc40ce0e3e79c9dbb504f42f7a55b153}\label{class_scene_adc40ce0e3e79c9dbb504f42f7a55b153}} 
+\index{Scene@{Scene}!loadLevelJSON@{loadLevelJSON}}
+\index{loadLevelJSON@{loadLevelJSON}!Scene@{Scene}}
+\subsubsection{\texorpdfstring{loadLevelJSON()}{loadLevelJSON()}}
+{\footnotesize\ttfamily bool Scene\+::load\+Level\+J\+S\+ON (\begin{DoxyParamCaption}\item[{std\+::string}]{level\+J\+S\+O\+N\+File }\end{DoxyParamCaption})}
+
+
+
+Render function. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+engine\+Interface\+Ptr} & p\+\_\+engine\+Interface\+Ptr is the pointer for the engine interface \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{_scene_8h}{Scene.\+h}}\end{DoxyCompactItemize}

@@ -1,3 +1,7 @@
+/*! \file TransformComponent.h
+* Class controls the game engines transform components
+*/
+
 #pragma once
 #include "Component.h"
 #include <glm/glm.hpp>
@@ -24,34 +28,7 @@ public:
 	}
 	void OnMessage(const std::string m) override
 	{
-		// e.g.	if (m == "rotateLeft")
-		if (m == "CW")
-		{
-			yaw(0.01f);
-		}
-		else if (m == "CCW")
-		{
-			yaw(-0.01f);
-		}
-		else if (m == "TRight")
-		{
-			translate(TRANSLATE_ADJUSTMENT_VALUE, 0.f, 0.f);
-		}
-		else if (m == "TLeft")
-		{
-			translate(-TRANSLATE_ADJUSTMENT_VALUE, 0.f, 0.f);
-		}
-		else if (m == "SUp")
-		{
-			scaleUp(SCALE_ADJUSTMENT_VALUE, 0.f, 0.f);
-		}
-
-		else if (m == "SDown")
-		{
-			scaleUp(-SCALE_ADJUSTMENT_VALUE, 0.f, 0.f);
-		
-		}
-		
+	
 		
 	}
 	TransformComponent() : m_position(0), m_orientation(1,0,0,0), m_scale(1.0f) {}
